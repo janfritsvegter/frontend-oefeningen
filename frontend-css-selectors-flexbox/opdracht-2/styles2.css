@@ -1,0 +1,136 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@janfritsvegter
+hogeschoolnovi /
+frontend-css-selectors-flexbox-uitwerkingen
+Public
+
+1
+0
+
+0
+
+Code
+Issues 2
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+Insights
+
+frontend-css-selectors-flexbox-uitwerkingen/opdracht-2/styles.css
+novaeeken Add solutions
+Latest commit 5fde253 on May 5
+History
+0 contributors
+88 lines (78 sloc) 2.94 KB
+    /* ======================================================
+       OEFENEN MET FLEXBOX
+    ========================================================= */
+
+.one {
+    display: flex;
+    flex-direction: column;
+    /* uitlijning van begin tot eind (omdat direction = column is dat in dit geval boven tot onder, verticaal)*/
+    justify-content: flex-end;
+}
+
+.two {
+    display: flex;
+    /* row is de default, maar voor nu ter verduidelijking*/
+    flex-direction: row;
+    /* uitlijning van begin tot eind (omdat direction = row is dat in dit geval links naar rechts, horizontaal )*/
+    justify-content: space-between;
+}
+
+.three {
+    display: flex;
+    /* row is de default, maar voor nu ter verduidelijking*/
+    flex-direction: row;
+    /* uitlijning van begin tot eind (omdat direction = row is dat in dit geval links naar rechts, horizontaal )*/
+    justify-content: space-between;
+    /* uitlijning haaks op de flex-richting (omdat direction = row is dat in dit geval boven naar beneden, verticaal).
+     Dit zorgt ervoor dat het woordje Edhub op dezelfde hoogte staat als de menu-items. */
+    align-items: center;
+}
+
+.three .left {
+    list-style-type: none;
+    display: flex;
+    /* row is de default, maar voor nu ter verduidelijking*/
+    flex-direction: row;
+    /* uitlijning van begin tot eind (omdat direction = row is dat in dit geval links naar rechts, horizontaal )*/
+    justify-content: space-between;
+    /* alle items groeien NIET mee in verhouding tot de overgebleven ruimte */
+    flex-grow: 0;
+    /* alle items worden NIET kleiner dan de basis */
+    flex-shrink: 0;
+    /*Als we geen basis breedte meegeven wordt de container net zo groot als de content die erin zit.
+    Dan is er niks te 'verspreiden' omdat er geen ongebruikte lege ruimte is.
+    Zorg daarom altijd dat je container groter is dan je content als je dit wil bereiken.  */
+    flex-basis: 300px;
+}
+
+.three .right {
+    list-style-type: none;
+}
+
+.four {
+    display: flex;
+    /* row is de default, maar voor nu ter verduidelijking*/
+    flex-direction: row;
+    /* uitlijning van begin tot eind (omdat direction = row is dat in dit geval links naar rechts, horizontaal )*/
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* uitlijning van begin tot eind (omdat direction = column is dat in dit geval boven tot onder, verticaal)*/
+    justify-content: center;
+    /* uitlijning haaks op de flex-richting (omdat direction = column is dat in dit geval links naar rechts, horizontaal) */
+    align-items: center;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.five {
+    display: flex;
+    /* row is de default, maar voor nu ter verduidelijking*/
+    flex-direction: row;
+    /* als het niet meer past, ga verder op de volgende rij*/
+    flex-wrap: wrap;
+}
+
+article {
+    /* alle items groeien met evenveel fracties van de overgebleven beschikbare ruimte*/
+    flex-grow: 1;
+    /* item mag niet kleiner worden dan de basis*/
+    flex-shrink: 0;
+    flex-basis: 360px;
+}
+
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
+Loading complete

@@ -1,0 +1,58 @@
+/*Maak hier jouw CSS!*/
+
+.grid-container {
+    background-color: antiquewhite;
+    display: grid;
+    column-gap: 16px;
+    row-gap: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto repeat(5, 50px);
+    grid-template-areas:"a" "b" "c" "d" "e" "empty" "f";
+}
+
+@media screen and (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+                        "a c c"
+                        "b c c"
+                        "b e d"
+                        "b e empty"
+                        "f f f";
+    }
+}
+
+.grid-item {
+    background-color: red;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+
